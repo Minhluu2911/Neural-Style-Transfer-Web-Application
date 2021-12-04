@@ -6,7 +6,7 @@ st.set_page_config(
 
 st.title('NEURAL STYLE TRANSFER: CREATING YOUR ART WITH DEEP LEARNING')
 st.write("""
- ***Description***: Neural style transfer is an optimization technique used to take your image and a style reference (such as an artwork by a famous painter) — and blend them together such that the input image is transformed to look like the style of the style image.
+ ***Description***: Neural style transfer is an optimization technique used to take your image and a style reference (such as an artwork by a famous painter) — and blend them together such that the input image is transformed to look like the style reference.
          """)
 
 col1, col2 = st.columns(2)
