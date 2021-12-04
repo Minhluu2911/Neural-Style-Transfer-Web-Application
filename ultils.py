@@ -61,10 +61,9 @@ def generate_image(input_image, style_model):
         imagefile = BytesIO()
         animage.save(imagefile, format='png')
         imagedata = imagefile.getvalue()
-        
         st.download_button(
             label="Download image",
             data=imagedata,
-            file_name="flower.png",
+            file_name= "Transfer_" + input_image.name + ".png",
             mime="image/png"
         )
