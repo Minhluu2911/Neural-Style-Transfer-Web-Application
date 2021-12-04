@@ -51,6 +51,13 @@ def generate_image(input_image, style_model):
         st.stop()
 
     WIDTH = st.select_slider('Affected style', list(range(100, 1001, 10)), value=400)
+    while WIDTH in [650, 770, 780, 790, 820, 830, 870, 900, 950]: # value can not transfer
+        n = np.random.randint(1, 11)
+        if n % 2 == 0:
+            WIDTH += 10
+        else:
+            WIDTH -= 10
+    st.write(WIDTH)
     content = imutils.resize(content, width=WIDTH)
     generated = style_transfer(content, model)
     st.image(generated, width=300)
